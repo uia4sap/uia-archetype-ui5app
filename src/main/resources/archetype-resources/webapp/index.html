@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+	<title>UI5 Application</title>
+	<script 
+		id="sap-ui-bootstrap"
+		src="resources/sap-ui-core.js"
+		data-sap-ui-async="true"
+        data-sap-ui-bindingSyntax="complex"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-theme="sap_belize"
+        data-sap-ui-xx-waitForTheme="true"
+		data-sap-ui-resourceroots='{
+			"${package}": "./"
+		}'>
+	</script>
+
+	<script type="text/javascript">
+        sap.ui.getCore().attachInit(function() {
+            sap.ui.require([
+                "sap/ui/core/ComponentContainer"
+            ], function() {
+                new sap.ui.core.ComponentContainer({
+                    height : "100%",
+                    name : "${package}",
+                    settings : {
+                        id : "${package}"
+                    }
+                }).placeAt("content");
+            });
+        });
+    </script>
+    
+    <script type="text/javascript" src="./js/api/AbstractWebService.js"></script>
+    <script type="text/javascript" src="./js/api/SomeWebService.js"></script>
+</head>
+<body id='content' class='sapUiBody'>
+</body>
+</html>

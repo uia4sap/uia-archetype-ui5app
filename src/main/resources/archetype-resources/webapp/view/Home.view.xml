@@ -1,0 +1,21 @@
+<mvc:View
+		controllerName="${package}.controller.Home"
+		xmlns:m="sap.m"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:l="sap.ui.layout">
+	<m:Page showHeader="false">
+		<l:BlockLayout
+				id="BlockLayout"
+				background="Default">
+			<l:BlockLayoutRow>
+				<l:BlockLayoutCell>
+					<m:Toolbar>
+						<m:Label text="Application: {view>/version}" />
+						<m:ToolbarSpacer />
+						<m:Label text="© UIA 2020" />
+					</m:Toolbar>
+				</l:BlockLayoutCell>
+			</l:BlockLayoutRow>
+		</l:BlockLayout>
+	</m:Page>
+</mvc:View>
